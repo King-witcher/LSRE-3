@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSRE 3", "LSRE 3.csproj", "{C2215388-CE97-40EB-9F12-136188ED874E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2215388-CE97-40EB-9F12-136188ED874E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2215388-CE97-40EB-9F12-136188ED874E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2215388-CE97-40EB-9F12-136188ED874E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2215388-CE97-40EB-9F12-136188ED874E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A93ADBD-E1B7-4C97-B39B-D934182376E5}
+	EndGlobalSection
+EndGlobal
