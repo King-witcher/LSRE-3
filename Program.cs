@@ -4,33 +4,15 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
-    }
-}
+        double universe = Calculus.IntegralR(x =>
+        {
+            return 1 / Math.Exp(x * x);
+        }, 0.0001);
 
-class History
-{
-
-    public List<Match> Matches;
-}
-
-class Calculus
-{
-
-}
-
-class RatingModel
-{
-    History history;
-
-    public double P_Result(Player winner, Player loser)
-    {
-        double gap = loser.LSR - winner.LSR;
-        return 1 / (1 + Math.Exp(gap));
-    }
-
-    public void Estimate(int rounds = 30, double precision = 0.01)
-    {
-
+        Console.WriteLine(Calculus.AverageR(x =>
+        {
+            x = x + 1;
+            return 1 / Math.Exp(x * x);
+        }, universe, 0.001));
     }
 }

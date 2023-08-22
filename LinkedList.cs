@@ -29,6 +29,33 @@ unsafe struct LinkedList<T> where T: unmanaged
         return pointer;
     }
 
+    public bool Contains(Player* player)
+    {
+        fixed (Node<T>** pptr = &first)
+        {
+            while(*pptr != null)
+            {
+                if (*pptr == player)
+                    return true;
+            }
+            return false;
+        }
+
+    }
+
+    public delegate void IterateCallback(T* pointer);
+
+    public void ForEach(IterateCallback callback)
+    {
+        fixed (Node<T>** pptr = &first)
+        {
+            while (*pptr != null)
+            {
+                callback((*pptr)->data);
+            }
+        }
+    }
+
     public void Add(T* value)
     {
         Node<T>* node = Node<T>.Alloc(value);

@@ -1,13 +1,18 @@
 ﻿
+using System.Runtime.InteropServices;
+
 namespace LSRE_3;
 
 internal unsafe struct Match
 {
-    Player* winner;
-    Player* loser;
-}
+    public Player* winner;
+    public Player* loser;
 
-unsafe struct MatchList<T> where T : unmanaged
-{
-    T* node;
+    public static Match* Alloc(Player* winner, Player* loser)
+    {
+        var match = (Match*)Marshal.AllocHGlobal(sizeof(Match));
+        match->winner = winner;
+        match->loser = loser;
+        return match;
+    }
 }
