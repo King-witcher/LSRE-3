@@ -2,11 +2,18 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net6.0-windows10.0.22621.0</TargetFramework>
     <RootNamespace>LSRE_3</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <StartupObject>LSRE_3.Program</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="LSRE_3.Utils">
+      <Static>True</Static>
+    </Using>
+  </ItemGroup>
 
 </Project>

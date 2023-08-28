@@ -6,7 +6,7 @@ unsafe struct Node<T> where T : unmanaged
 {
     public static Node<T>* Alloc(T* value)
     {
-        var pointer = (Node<T>*)Marshal.AllocHGlobal(sizeof(Node<T>));
+        var pointer = malloc<Node<T>>();
         pointer->data = value;
         pointer->next = null;
         return pointer;
@@ -49,9 +49,11 @@ unsafe struct LinkedList<T> where T: unmanaged
     {
         fixed (Node<T>** pptr = &first)
         {
-            while (*pptr != null)
+            Node<T>** cur = pptr;
+            while (*cur != null)
             {
-                callback((*pptr)->data);
+                callback((*cur)->data);
+                cur = &(*cur)->next;
             }
         }
     }
